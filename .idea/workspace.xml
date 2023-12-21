@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/quizService/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/QuizServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/Controllers/QuizController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/Entities/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/Entities/Quiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/Entities/QuizMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2ZlDNBqImR4dLMGNZryjihoTLQi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "/Users/aaryaprasannan/UCD/Autumn2023/Modules/DistributedSystems/DistributedQuizGameRepo/distributed-quiz-game-repo/quizService",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "c7b9a77e37baeff2ce93dddc8f2f40a2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/quizService" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/roomService" />
+      <recent name="$PROJECT_DIR$/masterService" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.game.quizService.Controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MasterServiceApplication">
+    <configuration name="MasterServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="masterService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.masterService.MasterServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuizServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="quizService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.quizService.QuizServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoomServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="roomService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.roomService.RoomServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="" />
+      <created>1702987731588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702987731588</updated>
+      <workItem from="1702987733018" duration="2615000" />
+      <workItem from="1702991265032" duration="855000" />
+      <workItem from="1702992193861" duration="971000" />
+      <workItem from="1703092328935" duration="4278000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
