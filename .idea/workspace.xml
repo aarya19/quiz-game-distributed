@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Utilities/MongoConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Utilities/MongoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/QuizMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/QuizMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/QuizServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/QuizServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +110,7 @@
       <workItem from="1702992193861" duration="971000" />
       <workItem from="1703092328935" duration="4629000" />
       <workItem from="1703162688040" duration="452000" />
-      <workItem from="1703192638439" duration="11063000" />
+      <workItem from="1703192638439" duration="14807000" />
     </task>
     <servers />
   </component>

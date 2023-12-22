@@ -34,16 +34,15 @@ public class QuizController {
     @PostMapping("/createQuiz/{username}")
     public String createQuiz(@RequestBody Quiz quiz, @PathVariable String username){
         String quizMaster = quiz.getQuizMaster();
-        //check if quizMasterExists
 
+        //check if quizMasterExists
         List<?> quizMasterList = mongoService.findQuizMaster("_id",username);
         if(quizMasterList.isEmpty()){
             return "QuizMaster does not exist";
         }
 
-        //Create an object with quizId and questions and add it to the DB.
+        //add Quiz object to the DB.
         mongoService.saveData(quiz);
-        //send both of it to the db and wait for response
         return "Quiz Created by" + quizMaster;
     }
 
