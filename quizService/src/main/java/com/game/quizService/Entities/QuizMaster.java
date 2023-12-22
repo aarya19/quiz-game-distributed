@@ -1,5 +1,11 @@
 package com.game.quizService.Entities;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document(collection = "quiz_master") //edit this to the collection name
+
 public class QuizMaster {
     public String getUserName() {
         return userName;
@@ -9,6 +15,7 @@ public class QuizMaster {
         this.userName = userName;
     }
 
+    @Id
     String userName;
 
     public String getPassword() {

@@ -1,9 +1,18 @@
 package com.game.quizService.Entities;
 
 import java.util.ArrayList;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document(collection = "quizzes") //edit this to the collection name
 
 public class Quiz {
+
+
     String quizMaster;
+
+    @Id
     String quizId;
     ArrayList<Question> questions;
 
