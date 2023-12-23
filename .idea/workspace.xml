@@ -5,9 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/GameEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Room.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/QuizMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/QuizMaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Utilities/MongoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Utilities/MongoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,44 +43,46 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2ZlDNBqImR4dLMGNZryjihoTLQi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/aaryaprasannan/UCD/Autumn2023/Modules/DistributedSystems/DistributedQuizGameRepo/distributed-quiz-game-repo/quizService&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;b503b949c3126f5ec7f5bf31bee2c6d3&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "game-service-dev",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "/Users/macpro/FAMILY/Rahul/Academics/UCD/Documents/Autumn2023/COMP41720 Distributed Systems/Project/quiz-game-distributed/common/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "b503b949c3126f5ec7f5bf31bee2c6d3",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/src/main/resources" />
       <recent name="$PROJECT_DIR$/quizService" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/roomService" />
@@ -111,6 +129,7 @@
       <workItem from="1703092328935" duration="4629000" />
       <workItem from="1703162688040" duration="452000" />
       <workItem from="1703192638439" duration="14807000" />
+      <workItem from="1703271950055" duration="8905000" />
     </task>
     <servers />
   </component>

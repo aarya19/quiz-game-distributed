@@ -1,6 +1,7 @@
 package com.game.quizService.Utilities;
 
-import com.game.quizService.Entities.QuizMaster;
+import com.game.entities.QuizMaster;
+import com.game.entities.Quiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
