@@ -1,4 +1,4 @@
-package com.game.entities;
+package com.game.quizService.Entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
