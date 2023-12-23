@@ -6,16 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="masterService" />
         <module name="quizService" />
         <module name="roomService" />
-        <module name="masterService" />
-        <module name="common" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="common" options="-parameters" />
       <module name="masterService" options="-parameters" />
       <module name="quizService" options="-parameters" />
       <module name="roomService" options="-parameters" />

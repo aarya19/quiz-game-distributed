@@ -1,5 +1,0 @@
-com/game/common/KafkaTopicConfig.class
-com/game/entities/QuizMaster.class
-com/game/entities/Question.class
-com/game/entities/Quiz.class
-com/game/common/KafkaProducerConfig.class
