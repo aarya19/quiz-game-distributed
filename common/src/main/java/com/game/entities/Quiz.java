@@ -1,4 +1,4 @@
-package com.game.quizService.Entities;
+package com.game.entities;
 
 import java.util.ArrayList;
 import org.springframework.data.annotation.Id;

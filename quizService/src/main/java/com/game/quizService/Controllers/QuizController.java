@@ -1,8 +1,8 @@
 package com.game.quizService.Controllers;
 
 
-import com.game.quizService.Entities.Quiz;
-import com.game.quizService.Entities.QuizMaster;
+import com.game.entities.QuizMaster;
+import com.game.entities.Quiz;
 import com.game.quizService.Utilities.MongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
