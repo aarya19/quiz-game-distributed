@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/GameEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Entities/QuizMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/QuizMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Utilities/MongoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Utilities/MongoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/game/common/KafkaProducerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/game/common/KafkaProducerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/game/common/KafkaTopicConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/game/common/KafkaTopicConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/com/game/entities/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/game/entities/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +119,7 @@
       <workItem from="1703092328935" duration="4629000" />
       <workItem from="1703162688040" duration="452000" />
       <workItem from="1703192638439" duration="14807000" />
-      <workItem from="1703271950055" duration="8905000" />
+      <workItem from="1703271950055" duration="9561000" />
     </task>
     <servers />
   </component>
