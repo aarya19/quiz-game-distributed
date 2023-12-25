@@ -7,6 +7,16 @@ public class Room {
     private QuizMaster quizMaster;
     private List<Player> players;
 
+    public Room(int roomId, QuizMaster quizMaster, List<Player> players) {
+        this.roomId = roomId;
+        this.quizMaster = quizMaster;
+        this.players = players;
+    }
+
+    public Room(int roomId) {
+        this.roomId = roomId;
+    }
+
     public int getRoomId() {
         return roomId;
     }
@@ -31,12 +41,5 @@ public class Room {
         this.players = players;
     }
 
-    public Room(int roomId, QuizMaster quizMaster, List<Player> players) {
-        this.roomId = roomId;
-        this.quizMaster = quizMaster;
-        this.players = players;
-    }
 
-    public Room() {
-    }
 }
