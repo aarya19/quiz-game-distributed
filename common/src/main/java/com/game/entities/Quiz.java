@@ -1,6 +1,8 @@
-package com.game.common.entities;
+package com.game.entities;
 
 import java.util.ArrayList;
+
+import com.game.entities.Question;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,18 +12,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Quiz {
 
 
-    String quizMaster;
+    QuizMaster quizMaster;
 
     @Id
     String quizId;
     ArrayList<Question> questions;
 
 
-    public String getQuizMaster() {
+    public QuizMaster getQuizMaster() {
         return quizMaster;
     }
 
-    public void setQuizMaster(String quizMaster) {
+    public void setQuizMaster(QuizMaster quizMaster) {
         this.quizMaster = quizMaster;
     }
 

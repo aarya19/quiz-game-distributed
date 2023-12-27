@@ -3,7 +3,7 @@ package com.game.roomService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackageClasses = {com.game.common.KafkaProducerConfig.class, com.game.roomService.Controllers.RoomController.class})
+@SpringBootApplication(scanBasePackages = {"com.game.common", "com.game.roomService.Controllers"})
 public class RoomServiceApplication {
 
 	public static void main(String[] args) {

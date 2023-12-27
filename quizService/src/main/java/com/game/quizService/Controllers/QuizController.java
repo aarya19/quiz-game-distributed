@@ -1,9 +1,9 @@
 package com.game.quizService.Controllers;
 
 
-import com.game.quizService.Entities.Quiz;
-import com.game.quizService.Entities.QuizMaster;
-import com.game.quizService.Utilities.MongoService;
+import com.game.entities.Quiz;
+import com.game.entities.QuizMaster;
+import com.game.utilities.MongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +33,7 @@ public class QuizController {
 
     @PostMapping("/createQuiz/{username}")
     public String createQuiz(@RequestBody Quiz quiz, @PathVariable String username){
-        String quizMaster = quiz.getQuizMaster();
+        QuizMaster quizMaster = quiz.getQuizMaster();
 
         //check if quizMasterExists
         List<?> quizMasterList = mongoService.findQuizMaster("_id",username);
@@ -43,7 +43,7 @@ public class QuizController {
 
         //add Quiz object to the DB.
         mongoService.saveData(quiz);
-        return "Quiz Created by" + quizMaster;
+        return "Quiz Created by" + username;
     }
 
 

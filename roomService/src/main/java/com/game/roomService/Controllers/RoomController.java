@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.UUID;
 
+import static com.game.core.Constants.*;
+
 @RestController
 @RequestMapping("/quizroom")
 public class RoomController {
@@ -24,7 +26,7 @@ public class RoomController {
     private KafkaProducerConfig producer;
     KafkaTopicConfig topicConfig = new KafkaTopicConfig();
 
-    private static final String ROOM_TOPIC = "Rooms";
+
 
     public RoomController(KafkaProducerConfig producer) {
         this.producer = producer;
@@ -42,7 +44,7 @@ public class RoomController {
         NewTopic roomTopic = topicConfig.createTopic(ROOM_TOPIC);
         LOGGER.info(String.format("Topic: %s", roomTopic.name()));
 
-        Room room = new Room(1);
+        Room room = new Room(2);
         producer.setTopic(roomTopic);
         producer.sendMessage(room);
 
