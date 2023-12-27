@@ -1,4 +1,4 @@
-package com.game.common.entities;
+package com.game.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,6 +17,7 @@ public class QuizMaster {
 
     @Id
     String userName;
+    String name;
 
     public String getPassword() {
         return password;
@@ -27,4 +28,21 @@ public class QuizMaster {
     }
 
     String password;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public QuizMaster(String userName, String name, String password) {
+        this.userName = userName;
+        this.name = name;
+        this.password = password;
+    }
+
+    public QuizMaster() {
+    }
 }

@@ -1,6 +1,7 @@
-package com.game.quizService.Utilities;
+package com.game.utilities;
 
-import com.game.quizService.Entities.QuizMaster;
+import com.game.entities.Quiz;
+import com.game.entities.QuizMaster;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -33,8 +34,11 @@ public class MongoService {
 
         return mongoTemplate.find(query, QuizMaster.class);
     }
+    public Quiz fetchQuiz(String quizId){
+        Query query = new Query(Criteria.where("_id").is(quizId));
 
-
+        return mongoTemplate.findOne(query, Quiz.class);
+    }
 
 
 }

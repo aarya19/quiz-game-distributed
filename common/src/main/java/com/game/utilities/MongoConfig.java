@@ -1,4 +1,4 @@
-package com.game.quizService.Utilities;
+package com.game.utilities;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
