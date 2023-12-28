@@ -4,6 +4,7 @@ import com.game.common.KafkaProducerConfig;
 import com.game.common.KafkaTopicConfig;
 import com.game.core.Constants;
 import com.game.entities.GameEvent;
+import com.game.entities.Player;
 import com.game.entities.Question;
 import com.game.entities.Quiz;
 import org.springframework.stereotype.Service;
@@ -27,8 +28,7 @@ public class GameService {
         KafkaTopicConfig topicConfig = new KafkaTopicConfig();
         NewTopic topic = topicConfig.createTopic(QUIZ_EVENTS);
         producer.setTopic(topic);
-        GameEvent event = new GameEvent(Constants.EVENT_TYPE.START_QUIZ.event(), quiz.getQuizId());
-        producer.sendMessage(event);
+        GameEvent event = new GameEvent(quiz.getQuizId());
 
 
         Timer timer = new Timer();
@@ -48,5 +48,12 @@ public class GameService {
                 }
             }
         }, timeout, timeout);
+    }
+
+    public void updateResponse(GameEvent gameEvent){
+        // Assuming the event here already contains the Question object, and the player responses map.
+        // The score handler will then use kSQL to fetch all the score events and collate the final score
+        gameEvent.setEventType(Constants.EVENT_TYPE.UPDATE_SCORE.event());
+        producer.sendMessage(gameEvent);
     }
 }

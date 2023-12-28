@@ -8,6 +8,7 @@ public class Constants {
     public static enum EVENT_TYPE {
         UPDATE_QUESTION("update_question"),
         UPDATE_SCORE("update_score"),
+        UPDATE_RESPONSE("update_response"),
         START_QUIZ("start_quiz"),
         END_QUIZ("end_quiz");
 

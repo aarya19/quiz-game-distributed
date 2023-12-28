@@ -17,6 +17,10 @@ public class GameEvent {
         this.response = null;
     }
 
+    public GameEvent(String quizId) {
+        this.quizId = quizId;
+    }
+
     public void setQuestion(Question question) {
         this.question = question;
     }
@@ -31,5 +35,17 @@ public class GameEvent {
 
     public void setEventType(String eventType) {
         this.eventType = eventType;
+    }
+
+    public String getQuizId() {
+        return quizId;
+    }
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public Map<Player, Character> getResponse() {
+        return response;
     }
 }
