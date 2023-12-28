@@ -44,6 +44,7 @@ public class RoomController {
         NewTopic roomTopic = topicConfig.createTopic(ROOM_TOPIC);
         LOGGER.info(String.format("Topic: %s", roomTopic.name()));
 
+        // To-Do: Create a logic to generate unique room id. If room id can be string, use the roomId variable above.
         Room room = new Room(2);
         producer.setTopic(roomTopic);
         producer.sendMessage(room);

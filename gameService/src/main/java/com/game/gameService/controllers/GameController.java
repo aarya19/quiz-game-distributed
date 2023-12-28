@@ -7,13 +7,16 @@ import com.game.entities.GameEvent;
 import com.game.entities.Question;
 import com.game.entities.Quiz;
 import com.game.gameService.service.GameService;
+import com.game.utilities.KSQLConfig;
 import com.game.utilities.MongoService;
+import io.confluent.ksql.api.client.Client;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -75,6 +78,27 @@ public class GameController {
         event.setEventType(Constants.EVENT_TYPE.UPDATE_SCORE.event());
         producer.sendMessage(event);
     }
+
+    @GetMapping("/test/ksql")
+    public void getGameEventData(){
+        KSQLConfig config = new KSQLConfig();
+        Client client = config.getQuizEventStreamClient();
+        config.createQuizEventsTable(client);
+        String query = """
+                SELECT * from quiz_events;
+                """;
+        try {
+            List<GameEvent> l = config.streamQuizEvents(client, query);
+            for(GameEvent e : l){
+                System.out.println(e);
+            }
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 //    @KafkaListener(topics = QUIZ_EVENTS, groupId = "response")
 //    public void updateResponse(GameEvent event){

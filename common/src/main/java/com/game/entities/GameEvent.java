@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 
@@ -21,6 +23,8 @@ public class GameEvent implements Serializable {
     private Question question;
     @Getter
     private Map<String, String> response; // playerName: chosenOption
+    @Getter
+    private String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
 
     public GameEvent(String eventType, String quizId) {
         this.eventType = eventType;
@@ -47,6 +51,14 @@ public class GameEvent implements Serializable {
 
     public void setEventType(String eventType) {
         this.eventType = eventType;
+    }
+
+    public void setQuizId(String quizId) {
+        this.quizId = quizId;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
     @Override
