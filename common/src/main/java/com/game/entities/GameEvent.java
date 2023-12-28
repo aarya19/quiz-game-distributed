@@ -1,51 +1,61 @@
 package com.game.entities;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 import java.util.Map;
 
 
-public class GameEvent {
+@AllArgsConstructor
+@NoArgsConstructor
+public class GameEvent implements Serializable {
 
+    @Getter
     private String eventType;
+    @Getter
     private String quizId;
+    @Getter
     private Question question;
-    private Map<Player, Character> response;
+    @Getter
+    private Map<String, String> response; // playerName: chosenOption
 
     public GameEvent(String eventType, String quizId) {
         this.eventType = eventType;
         this.quizId = quizId;
-        this.question = null;
-        this.response = null;
+//        this.question = new Question();
+//        this.response = "";
     }
 
     public GameEvent(String quizId) {
+        this.eventType = "";
         this.quizId = quizId;
+//        this.question = "";
+//        this.response = "";
+
     }
 
     public void setQuestion(Question question) {
         this.question = question;
     }
 
-    public void setResponse(Map<Player, Character> response) {
+    public void setResponse(Map<String, String> response) {
         this.response = response;
-    }
-
-    public String getEventType() {
-        return eventType;
     }
 
     public void setEventType(String eventType) {
         this.eventType = eventType;
     }
 
-    public String getQuizId() {
-        return quizId;
-    }
-
-    public Question getQuestion() {
-        return question;
-    }
-
-    public Map<Player, Character> getResponse() {
-        return response;
+    @Override
+    public String toString() {
+        return "GameEvent{" +
+                "eventType='" + eventType + '\'' +
+                ", quizId='" + quizId + '\'' +
+                ", question='" + question + '\'' +
+                ", response='" + response + '\'' +
+                '}';
     }
 }

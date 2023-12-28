@@ -11,12 +11,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Question {
 
     @Id
-    String id;
-    String question;
-    int quizId;
-    Map<Character, String> options = new HashMap<>();
+    String id = "";
+    String question = "";
+    String quizId="";
+    Map<String, String> options = new HashMap<>();
 
-    Character correctAsnwer;
+    String correctAnswer="";
 
     public String getId() {
         return id;
@@ -26,15 +26,26 @@ public class Question {
         return question;
     }
 
-    public int getQuizId() {
+    public String getQuizId() {
         return quizId;
     }
 
-    public Map<Character, String> getOptions() {
+    public Map<String, String> getOptions() {
         return options;
     }
 
-    public Character getCorrectAsnwer() {
-        return correctAsnwer;
+    public String getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id='" + id + '\'' +
+                ", question='" + question + '\'' +
+                ", quizId='" + quizId + '\'' +
+                ", options=" + options +
+                ", correctAnswer='" + correctAnswer + '\'' +
+                '}';
     }
 }

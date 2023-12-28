@@ -1,5 +1,12 @@
 package com.game.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Player {
     private String playerName;
     private int score;
@@ -8,16 +15,9 @@ public class Player {
         this.playerName = playerName;
     }
 
-    public String getPlayerName() {
-        return playerName;
-    }
 
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
-    }
-
-    public int getScore() {
-        return score;
     }
 
     public void setScore(int score) {
