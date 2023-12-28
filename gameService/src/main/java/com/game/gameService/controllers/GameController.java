@@ -66,6 +66,16 @@ public class GameController {
         }
     }
 
+    // TO-DO: Remove this and create an equivalent test case in a test suite
+    @PostMapping("/test/updateResponse")
+    public void updateResponse(@RequestBody GameEvent event){
+        KafkaTopicConfig topicConfig = new KafkaTopicConfig();
+        NewTopic topic = topicConfig.createTopic(QUIZ_EVENTS);
+        producer.setTopic(topic);
+        event.setEventType(Constants.EVENT_TYPE.UPDATE_SCORE.event());
+        producer.sendMessage(event);
+    }
+
 //    @KafkaListener(topics = QUIZ_EVENTS, groupId = "response")
 //    public void updateResponse(GameEvent event){
 //        if (event.getEventType().equals(Constants.EVENT_TYPE.UPDATE_RESPONSE.event())){

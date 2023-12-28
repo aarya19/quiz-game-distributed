@@ -39,7 +39,7 @@ public class GameService {
             public void run() {
                 if (questionListIterator.hasNext()){
                     event.setEventType(Constants.EVENT_TYPE.UPDATE_QUESTION.event());
-                    event.setQuestion(questionListIterator.next().getQuizId());
+                    event.setQuestion(questionListIterator.next());
                     producer.sendMessage(event);
                 } else{
                     event.setEventType(Constants.EVENT_TYPE.END_QUIZ.event());

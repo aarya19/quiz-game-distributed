@@ -37,4 +37,15 @@ public class Question {
     public String getCorrectAnswer() {
         return correctAnswer;
     }
+
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id='" + id + '\'' +
+                ", question='" + question + '\'' +
+                ", quizId='" + quizId + '\'' +
+                ", options=" + options +
+                ", correctAnswer='" + correctAnswer + '\'' +
+                '}';
+    }
 }

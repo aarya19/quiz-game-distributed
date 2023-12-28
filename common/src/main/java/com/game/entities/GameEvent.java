@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Map;
 
 
 @AllArgsConstructor
@@ -17,30 +18,30 @@ public class GameEvent implements Serializable {
     @Getter
     private String quizId;
     @Getter
-    private String question;
+    private Question question;
     @Getter
-    private String response;
+    private Map<String, String> response; // playerName: chosenOption
 
     public GameEvent(String eventType, String quizId) {
         this.eventType = eventType;
         this.quizId = quizId;
-        this.question = "";
-        this.response = "";
+//        this.question = new Question();
+//        this.response = "";
     }
 
     public GameEvent(String quizId) {
         this.eventType = "";
         this.quizId = quizId;
-        this.question = "";
-        this.response = "";
+//        this.question = "";
+//        this.response = "";
 
     }
 
-    public void setQuestion(String questionId) {
-        this.question = questionId;
+    public void setQuestion(Question question) {
+        this.question = question;
     }
 
-    public void setResponse(String response) {
+    public void setResponse(Map<String, String> response) {
         this.response = response;
     }
 
