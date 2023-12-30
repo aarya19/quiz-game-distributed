@@ -37,6 +37,8 @@ public class Room {
         this.quizMaster = quizMaster;
     }
 
+    public String getQuizMasterName(){ return quizMaster.name;}
+
     public List<Player> getPlayers() {
         return players;
     }
