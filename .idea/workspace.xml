@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaTopicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +121,14 @@
       <workItem from="1703192638439" duration="14807000" />
       <workItem from="1703271950055" duration="9561000" />
     </task>
+    <task id="LOCAL-00001" summary="Added create room service api changes">
+      <created>1703895224434</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703895224434</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +144,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added create room service api changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added create room service api changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
