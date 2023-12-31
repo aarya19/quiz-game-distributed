@@ -9,11 +9,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/common/KafkaTopicConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/resources/application.properties" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

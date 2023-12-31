@@ -2,6 +2,7 @@ package com.game.roomService.Controllers;
 
 import com.game.common.KafkaProducerConfig;
 import com.game.common.KafkaTopicConfig;
+import com.game.entities.QuizMaster;
 import com.game.entities.Room;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -9,11 +10,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 import static com.game.core.Constants.*;
@@ -38,19 +38,19 @@ public class RoomController {
 //    }
 
     @PostMapping("/create")
-    public String createQuizRoom() {
+    public String createQuizRoom(@RequestBody Room room) {
         // Generate a unique ID
-        String roomId = UUID.randomUUID().toString();
+        // String roomId = UUID.randomUUID().toString();
         NewTopic roomTopic = topicConfig.createTopic(ROOM_TOPIC);
         LOGGER.info(String.format("Topic: %s", roomTopic.name()));
 
-        // To-Do: Create a logic to generate unique room id. If room id can be string, use the roomId variable above.
-        Room room = new Room(2);
+        // Room room = new Room(roomId,quizMaster,new ArrayList<>());
         producer.setTopic(roomTopic);
         producer.sendMessage(room);
 
         // Return the unique ID as the response
-        return "Quiz room created with ID: " + room.getRoomId();
+        return "Quiz room created with ID: " + room.getRoomId() + "Quiz master: "+ room.getQuizMaster()+ "and players: "+ room.getPlayers();
+
     }
 }
 
