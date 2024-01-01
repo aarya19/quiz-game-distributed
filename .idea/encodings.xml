@@ -8,6 +8,8 @@
     <file url="file://$PROJECT_DIR$/quizService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/roomService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/roomService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scoreService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scoreService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

@@ -1,5 +1,6 @@
 package com.game.utilities;
 
+import com.game.entities.Question;
 import com.game.entities.Quiz;
 import com.game.entities.QuizMaster;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +40,13 @@ public class MongoService {
 
         return mongoTemplate.findOne(query, Quiz.class);
     }
+
+    public Question fetchQuestion(String quizId, String questionId){
+        Query query = new Query(Criteria.where("_id").is(questionId+"_"+quizId));
+
+        return mongoTemplate.findOne(query, Question.class);
+    }
+
 
 
 }
