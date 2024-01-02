@@ -30,10 +30,10 @@ public class MongoService {
         mongoTemplate.save(data);
     }
 
-    public List<QuizMaster> findQuizMaster(String key, String value) {
-        Query query = new Query(Criteria.where(key).is(value));
+    public QuizMaster findQuizMaster(String key, String value) {
+//        Query query = new Query(Criteria.where(key).is(value));
 
-        return mongoTemplate.find(query, QuizMaster.class);
+        return mongoTemplate.findById(value, QuizMaster.class);
     }
     public Quiz fetchQuiz(String quizId){
         Query query = new Query(Criteria.where("_id").is(quizId));
