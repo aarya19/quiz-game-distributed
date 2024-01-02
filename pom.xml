@@ -13,6 +13,7 @@
         <module>masterService</module>
         <module>roomService</module>
         <module>quizService</module>
+        <module>gameService</module>
     </modules>
 
     <properties>
