@@ -5,10 +5,11 @@ public class Answer {
 
     }
 
-    public Answer(String playerId, String quizId, String questionId, String answer) {
+    public Answer(String playerId, String quizId, String questionId, String answer, Question question) {
         this.playerId = playerId;
         this.quizId = quizId;
         this.questionId = questionId;
+        this.question = question;
     }
 
     public String getPlayerId() {
@@ -48,6 +49,16 @@ public class Answer {
     }
 
     String answer;
+
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
+    Question question;
 
 
 }

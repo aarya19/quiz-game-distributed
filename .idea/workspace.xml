@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Answer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/HELP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/ScoreServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/src/test/java/com/scorehandler/scoreService/ScoreServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/ScoreEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/service/ScoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/utilities/MongoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/utilities/MongoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/core/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/core/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Answer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameService/src/main/java/com/game/gameService/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/src/main/java/com/game/gameService/controllers/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/ScoreServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/ScoreServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,31 +51,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "game-service-dev",
-    "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "/Users/aaryaprasannan/UCD/Autumn2023/Modules/DistributedSystems/DistributedQuizGameRepo/distributed-quiz-game-repo/scoreService",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "b503b949c3126f5ec7f5bf31bee2c6d3",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;game-service-dev&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aaryaprasannan/UCD/Autumn2023/Modules/DistributedSystems/DistributedQuizGameRepo/distributed-quiz-game-repo/scoreService&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d5d364594991cec76f5c8b41a38bb8c9&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/scoreService" />
@@ -139,6 +133,8 @@
       <workItem from="1703162688040" duration="452000" />
       <workItem from="1703192638439" duration="14807000" />
       <workItem from="1703271950055" duration="9561000" />
+      <workItem from="1704102118398" duration="80000" />
+      <workItem from="1704102670720" duration="13955000" />
     </task>
     <task id="LOCAL-00001" summary="Added create room service api changes">
       <created>1703895224434</created>
@@ -175,6 +171,11 @@
           <properties class="java.net.UnknownHostException" package="java.net" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/service/ScoreService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
