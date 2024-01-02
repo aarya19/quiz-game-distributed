@@ -13,6 +13,8 @@ public class Question {
     @Id
     String id = "";
     String question = "";
+
+    @Id
     String quizId="";
     Map<String, String> options = new HashMap<>();
 

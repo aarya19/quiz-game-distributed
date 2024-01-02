@@ -4,6 +4,8 @@ public class Constants {
     public static final String ROOM_TOPIC = "Rooms";
     public static final String ACTIVE_QUESTIONS = "active-questions";
     public static final String QUIZ_EVENTS = "quiz-events";
+    public static final String SCORE_EVENTS = "score-events";
+
 
     public static enum EVENT_TYPE {
         UPDATE_QUESTION("update_question"),

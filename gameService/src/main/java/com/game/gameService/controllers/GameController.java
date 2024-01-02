@@ -32,6 +32,7 @@ public class GameController {
     public GameController(MongoService mongoService, KafkaProducerConfig producer) {
         this.mongoService = mongoService;
         this.producer = producer;
+
     }
 
     // start quiz
