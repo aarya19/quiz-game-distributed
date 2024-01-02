@@ -49,6 +49,18 @@ public class ScoreController {
     }
 
 
+    @GetMapping("/getFinalScores")
+    public String addScore(@RequestParam String quizId){
+        String res = "Getting the final player scores";
+
+        //fetch all the players and scores from the database
+        //order the player according to the score
+        //send back the json to the webHook
+
+        return res;
+    }
+
+
     //add a listener to listen to scores and update in the DB.
 
     @KafkaListener(topics = SCORE_EVENTS, groupId = "score_events")

@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/ScoreEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/service/ScoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/controller/MasterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/core/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/core/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Answer.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Answer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameService/src/main/java/com/game/gameService/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/src/main/java/com/game/gameService/controllers/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/ScoreServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/ScoreServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +131,7 @@
       <workItem from="1703192638439" duration="14807000" />
       <workItem from="1703271950055" duration="9561000" />
       <workItem from="1704102118398" duration="80000" />
-      <workItem from="1704102670720" duration="13955000" />
+      <workItem from="1704102670720" duration="18944000" />
     </task>
     <task id="LOCAL-00001" summary="Added create room service api changes">
       <created>1703895224434</created>
