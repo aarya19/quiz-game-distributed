@@ -1,25 +1,13 @@
 package com.game.masterService.controller;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.game.common.KafkaProducerConfig;
 import com.game.entities.Answer;
 import com.game.entities.QuizMaster;
-import com.game.utilities.MongoService;
 import com.game.utilities.RESTClient;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
-import org.springframework.web.servlet.view.RedirectView;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/app")
@@ -30,6 +18,8 @@ public class MasterController {
     private String addScoreEndpoint;
     @Value("${quiz.createQuizMaster.url}")
     private String createUserEndpoint;
+    @Value("${quiz.signin.url}")
+    private String signInEndpoint;
     @Value("${game.hostUrl.quizService}")
     private String URL_QUIZ_SERVICE;
     @Value("${game.hostUrl.roomService}")
@@ -51,9 +41,15 @@ public class MasterController {
 //        return redirectView;
     }
 
-    @PostMapping("signup")
+    @PostMapping("/signup")
     public String createUser(@RequestBody QuizMaster quizMaster){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_QUIZ_SERVICE+createUserEndpoint, quizMaster);
+        return responseEntity.getBody();
+    }
+
+    @PostMapping("/signin")
+    public String signIn(@RequestBody QuizMaster quizMaster){
+        ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_QUIZ_SERVICE+signInEndpoint, quizMaster);
         return responseEntity.getBody();
     }
 
