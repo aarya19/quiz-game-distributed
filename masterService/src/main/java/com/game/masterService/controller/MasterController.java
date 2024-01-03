@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.http.HttpResponse;
+
 @RestController
 @RequestMapping("/app")
 public class MasterController {
@@ -42,15 +44,16 @@ public class MasterController {
     }
 
     @PostMapping("/signup")
-    public String createUser(@RequestBody QuizMaster quizMaster){
+    public ResponseEntity<String> createUser(@RequestBody QuizMaster quizMaster){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_QUIZ_SERVICE+createUserEndpoint, quizMaster);
-        return responseEntity.getBody();
+
+        return responseEntity;
     }
 
     @PostMapping("/signin")
-    public String signIn(@RequestBody QuizMaster quizMaster){
+    public ResponseEntity<String> signIn(@RequestBody QuizMaster quizMaster){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_QUIZ_SERVICE+signInEndpoint, quizMaster);
-        return responseEntity.getBody();
+        return responseEntity;
     }
 
 
