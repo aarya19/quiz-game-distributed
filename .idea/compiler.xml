@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="quizService" />
+        <module name="playerService" />
         <module name="scoreService" />
         <module name="roomService" />
         <module name="masterService" />
@@ -15,12 +16,17 @@
         <module name="gameService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="roomService (1)" target="17" />
+      <module name="roomService (2)" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="gameService" options="-parameters" />
       <module name="masterService" options="-parameters" />
+      <module name="playerService" options="-parameters" />
       <module name="quizService" options="-parameters" />
       <module name="roomService" options="-parameters" />
       <module name="scoreService" options="-parameters" />

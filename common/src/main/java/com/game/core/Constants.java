@@ -7,6 +7,8 @@ public class Constants {
     public static final String SCORE_EVENTS = "score-events";
 
 
+    public static final String PLAYERS_JOINED = "players-joined";
+
     public static enum EVENT_TYPE {
         UPDATE_QUESTION("update_question"),
         UPDATE_SCORE("update_score"),
