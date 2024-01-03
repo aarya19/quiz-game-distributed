@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/controller/MasterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/utilities/MongoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/utilities/MongoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -85,7 +84,14 @@
       <recent name="com.game.quizService.Controllers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.MasterServiceApplication">
+    <configuration name="GameServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gameService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.gameService.GameServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MasterServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="masterService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.masterService.MasterServiceApplication" />

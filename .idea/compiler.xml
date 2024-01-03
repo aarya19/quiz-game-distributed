@@ -12,12 +12,14 @@
         <module name="roomService" />
         <module name="masterService" />
         <module name="common" />
+        <module name="gameService" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
+      <module name="gameService" options="-parameters" />
       <module name="masterService" options="-parameters" />
       <module name="quizService" options="-parameters" />
       <module name="roomService" options="-parameters" />
