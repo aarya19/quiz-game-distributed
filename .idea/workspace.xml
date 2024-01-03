@@ -20,6 +20,15 @@
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" afterDir="false" />
+    <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/controller/MasterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +79,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;game-service-dev&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
+
     &quot;last_opened_file_path&quot;: &quot;C:/Users/tfiro/IdeaProjects/quiz-game-distributed/playerService/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -80,7 +90,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;b503b949c3126f5ec7f5bf31bee2c6d3&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d5d364594991cec76f5c8b41a38bb8c9&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -91,6 +101,12 @@
       <recent name="$PROJECT_DIR$/common/src/main/resources" />
       <recent name="$PROJECT_DIR$/quizService" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/scoreService" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/common/src/main/resources" />
+      <recent name="$PROJECT_DIR$/quizService" />
+      <recent name="$PROJECT_DIR$/roomService" />
+
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.game.quizService.Controllers" />
@@ -118,6 +134,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="scoreService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.scorehandler.scoreService.ScoreServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -134,6 +157,8 @@
       <workItem from="1703162688040" duration="452000" />
       <workItem from="1703192638439" duration="14807000" />
       <workItem from="1703271950055" duration="9561000" />
+      <workItem from="1704102118398" duration="80000" />
+      <workItem from="1704102670720" duration="18944000" />
     </task>
     <task id="LOCAL-00001" summary="Added create room service api changes">
       <created>1703895224434</created>
@@ -170,6 +195,11 @@
           <properties class="com.mongodb.MongoSocketOpenException" package="com.mongodb" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/service/ScoreService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

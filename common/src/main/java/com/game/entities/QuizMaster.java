@@ -7,6 +7,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "quiz_master") //edit this to the collection name
 
 public class QuizMaster {
+    @Id
+    String userName;
+    String name;
+    String password;
     public String getUserName() {
         return userName;
     }
@@ -15,10 +19,6 @@ public class QuizMaster {
         this.userName = userName;
     }
 
-    @Id
-    String userName;
-    String name;
-
     public String getPassword() {
         return password;
     }
@@ -26,8 +26,6 @@ public class QuizMaster {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    String password;
 
     public String getName() {
         return name;

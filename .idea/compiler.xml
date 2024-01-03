@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="quizService" />
         <module name="playerService" />
+        <module name="scoreService" />
+        <module name="roomService" />
         <module name="masterService" />
         <module name="common" />
         <module name="gameService" />
@@ -27,8 +29,7 @@
       <module name="playerService" options="-parameters" />
       <module name="quizService" options="-parameters" />
       <module name="roomService" options="-parameters" />
-      <module name="roomService (1)" options="-parameters" />
-      <module name="roomService (2)" options="-parameters" />
+      <module name="scoreService" options="-parameters" />
     </option>
   </component>
 </project>

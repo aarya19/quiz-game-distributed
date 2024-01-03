@@ -4,7 +4,9 @@ package com.game.quizService.Controllers;
 import com.game.entities.Quiz;
 import com.game.entities.QuizMaster;
 import com.game.utilities.MongoService;
+import jakarta.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.serializer.Serializer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,20 +32,28 @@ public class QuizController {
         return "New Quiz Master has been added with username!" + quizMaster.getUserName();
     }
 
+    @PostMapping("/signin")
+    public Response signIn(@RequestBody QuizMaster user){
+        QuizMaster quizMaster = mongoService.findQuizMaster("_id",user.getUserName());
+        if(quizMaster == null || !quizMaster.getPassword().equals(user.getPassword())){
+            return Response.status(Response.Status.UNAUTHORIZED).entity("Invalid credentials").build();
+        }
+
+        return Response.status(Response.Status.OK).entity(quizMaster).build();
+    }
+
 
     @PostMapping("/createQuiz/{username}")
     public String createQuiz(@RequestBody Quiz quiz, @PathVariable String username){
-        QuizMaster quizMaster = quiz.getQuizMaster();
-
         //check if quizMasterExists
-        List<?> quizMasterList = mongoService.findQuizMaster("_id",username);
-        if(quizMasterList.isEmpty()){
+        QuizMaster quizMaster = mongoService.findQuizMaster("_id",username);
+        if(quizMaster == null){
             return "QuizMaster does not exist";
         }
 
         //add Quiz object to the DB.
         mongoService.saveData(quiz);
-        return "Quiz Created by" + username;
+        return "Quiz Created by" + quizMaster.getName();
     }
 
 
