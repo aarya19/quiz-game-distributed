@@ -21,8 +21,8 @@
       <change beforePath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" afterDir="false" />
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/controller/MasterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/masterService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/MasterServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" afterDir="false" />
@@ -113,6 +113,13 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="GameServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gameService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.gameService.GameServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MasterServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="masterService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.masterService.MasterServiceApplication" />
