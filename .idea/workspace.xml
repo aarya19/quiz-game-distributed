@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/utilities/MongoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/utilities/MongoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +81,7 @@
       <recent name="com.game.quizService.Controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MasterServiceApplication">
+  <component name="RunManager">
     <configuration name="GameServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gameService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.gameService.GameServiceApplication" />

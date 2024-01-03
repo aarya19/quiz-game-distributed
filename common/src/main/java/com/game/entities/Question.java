@@ -14,7 +14,6 @@ public class Question {
     String id = "";
     String question = "";
 
-    @Id
     String quizId="";
     Map<String, String> options = new HashMap<>();
 
