@@ -5,6 +5,8 @@ public class Constants {
     public static final String ACTIVE_QUESTIONS = "active-questions";
     public static final String QUIZ_EVENTS = "quiz-events";
 
+    public static final String PLAYERS_JOINED = "players-joined";
+
     public static enum EVENT_TYPE {
         UPDATE_QUESTION("update_question"),
         UPDATE_SCORE("update_score"),
