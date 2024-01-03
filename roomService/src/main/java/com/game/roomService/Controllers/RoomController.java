@@ -41,12 +41,10 @@ public class RoomController {
         // Generate a unique ID
         // String roomId = UUID.randomUUID().toString();
 
-        // Check if the topic exists
-        if (!topicExists(ROOM_TOPIC)) {
-            NewTopic roomTopic = topicConfig.createTopic(ROOM_TOPIC);
-            LOGGER.info(String.format("Topic: %s", roomTopic.name()));
-            producer.setTopic(roomTopic);
-        }
+        NewTopic roomTopic = topicConfig.createTopic(ROOM_TOPIC);
+        LOGGER.info(String.format("Topic: %s", roomTopic.name()));
+        producer.setTopic(roomTopic);
+
 
         // Room room = new Room(roomId, quizMaster, new ArrayList<>());
         producer.sendMessage(room);
@@ -55,9 +53,9 @@ public class RoomController {
         return "Quiz room created with ID: " + room.getRoomId() + " Quiz master is " + room.getQuizMasterName();
     }
 
-    private boolean topicExists(String topicName) throws ExecutionException, InterruptedException {
-        ListTopicsResult topics = adminClient.listTopics();
-        Set<String> topicNames = topics.names().get();
-        return topicNames.contains(topicName);
-    }
+//    private boolean topicExists(String topicName) throws ExecutionException, InterruptedException {
+//        ListTopicsResult topics = adminClient.listTopics();
+//        Set<String> topicNames = topics.names().get();
+//        return topicNames.contains(topicName);
+//    }
 }

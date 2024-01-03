@@ -4,6 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="Added room creation using quiz id and quizmaster details. Can create checks if the topic is currently there or not.">
+      <change afterPath="$PROJECT_DIR$/playerService/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playerService/src/main/java/com/game/playerService/Consumers/PlayerConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playerService/src/main/java/com/game/playerService/Controllers/PlayerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playerService/src/main/java/com/game/playerService/PlayerServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playerService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/core/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/core/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/test/java/com/game/quizService/QuizServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/roomService/src/main/java/com/game/roomService/Controllers/RoomController.java" afterDir="false" />
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/controller/MasterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -12,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/Controllers/ScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +53,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -59,7 +79,8 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;game-service-dev&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/aaryaprasannan/UCD/Autumn2023/Modules/DistributedSystems/DistributedQuizGameRepo/distributed-quiz-game-repo/scoreService&quot;,
+
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tfiro/IdeaProjects/quiz-game-distributed/playerService/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -75,11 +96,17 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\playerService\src\main\resources" />
+      <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\playerService" />
+      <recent name="$PROJECT_DIR$/common/src/main/resources" />
+      <recent name="$PROJECT_DIR$/quizService" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/scoreService" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/common/src/main/resources" />
       <recent name="$PROJECT_DIR$/quizService" />
       <recent name="$PROJECT_DIR$/roomService" />
+
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.game.quizService.Controllers" />
@@ -165,8 +192,8 @@
     <breakpoint-manager>
       <breakpoints>
         <breakpoint enabled="true" type="java-exception">
-          <properties class="java.net.UnknownHostException" package="java.net" />
-          <option name="timeStamp" value="1" />
+          <properties class="com.mongodb.MongoSocketOpenException" package="com.mongodb" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/service/ScoreService.java</url>
