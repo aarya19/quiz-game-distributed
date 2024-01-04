@@ -50,6 +50,8 @@ public class MasterController {
     private String createQuizRoomEndpoint;
     @Value("${joinGame.endpoint.url}")
     private String joinGameEndpoint;
+    @Value("${scores.getAllScores}")
+    private String getAllScoresEndpoint;
 
     @PostMapping("/addScore")
     public void addScore(@RequestBody Answer playerAnswer){
@@ -58,8 +60,6 @@ public class MasterController {
         System.out.println("Response from external service: " + responseEntity.getBody());
 
     }
-
-
     @PostMapping("/createQuizMaster")
     public String createQuizMaster(@RequestBody QuizMaster quizMaster){
         ResponseEntity result = RESTClient.postMessage(URL_QUIZ_SERVICE + createQuizMasterEndpoint, quizMaster);
@@ -68,7 +68,6 @@ public class MasterController {
         return result.getBody().toString();
     }
 
-
     @PostMapping("/createQuiz/{userName}")
     public String createQuiz(@RequestBody Quiz quiz, @PathVariable String userName){
         ResponseEntity result = RESTClient.postMessage(URL_QUIZ_SERVICE + createQuizEndpoint + "/" + userName, quiz);
@@ -76,10 +75,6 @@ public class MasterController {
         System.out.println("Response from external service: " + result.getBody());
         return result.getBody().toString();
     }
-
-
-
-
     @PostMapping("/signup")
     public ResponseEntity<String> createUser(@RequestBody QuizMaster quizMaster){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_QUIZ_SERVICE+createUserEndpoint, quizMaster);
@@ -99,9 +94,13 @@ public class MasterController {
 //        return question;
 //    }
     @KafkaListener(topics = QUIZ_EVENTS, groupId = "quiz_events_questions")
-    public void startGame(GameEvent event){
+    public void sendGameEvents(GameEvent event){
         if (event.getEventType().equals(Constants.EVENT_TYPE.UPDATE_QUESTION.event())){
             template.convertAndSend("/events/question", event.getQuestion());
+        }
+        else if (event.getEventType().equals(Constants.EVENT_TYPE.END_QUIZ.event())){
+            ResponseEntity<String> scores = RESTClient.getMessage(URL_SCORE_SERVICE+getAllScoresEndpoint+event.getQuizId());
+            template.convertAndSend("/events/scores", scores.getBody() != null ? scores.getBody() : "");
         }
     }
 
@@ -113,6 +112,7 @@ public class MasterController {
     @PostMapping("/joinRoom")
     public ResponseEntity<String> joinGame(@RequestBody Player player){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_PLAYER_SERVICE+joinGameEndpoint, player);
+        template.convertAndSend("/events/joinedPlayers", player);
         return responseEntity;
     }
 
@@ -128,7 +128,5 @@ public class MasterController {
         ResponseEntity<String> responseEntity = RESTClient.getMessage(URL_QUIZ_SERVICE + fetchQuizzesEndpoint + "/" + userName);
         return responseEntity;
     }
-
-
 
 }
