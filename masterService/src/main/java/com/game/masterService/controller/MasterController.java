@@ -11,6 +11,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.http.HttpResponse;
 import static com.game.core.Constants.QUIZ_EVENTS;
 
 @RestController
@@ -80,15 +81,16 @@ public class MasterController {
 
 
     @PostMapping("/signup")
-    public String createUser(@RequestBody QuizMaster quizMaster){
+    public ResponseEntity<String> createUser(@RequestBody QuizMaster quizMaster){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_QUIZ_SERVICE+createUserEndpoint, quizMaster);
-        return responseEntity.getBody();
+
+        return responseEntity;
     }
 
     @PostMapping("/signin")
-    public String signIn(@RequestBody QuizMaster quizMaster){
+    public ResponseEntity<String> signIn(@RequestBody QuizMaster quizMaster){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_QUIZ_SERVICE+signInEndpoint, quizMaster);
-        return responseEntity.getBody();
+        return responseEntity;
     }
 
 //    @PostMapping("/updateQuestion")
