@@ -40,9 +40,14 @@ public class MasterController {
     private String URL_SCORE_SERVICE;
     @Value("${createQuizMaster.endpoint.url}")
     private String createQuizMasterEndpoint;
-
-    @Value("${createQuiz.endpoint.url}")
+    @Value("${game.hostUrl.playerService}")
+    private String URL_PLAYER_SERVICE;
+    @Value("${createQuizRoom.endpoint.url}")
+    private String createQuizRoomEndpoint;
+    @Value("${createQuizRoom.endpoint.url}")
     private String createQuizEndpoint;
+    @Value("${joinGame.endpoint.url}")
+    private String joinGameEndpoint;
 
     @PostMapping("/addScore")
     public void addScore(@RequestBody Answer playerAnswer){
@@ -97,6 +102,17 @@ public class MasterController {
         }
     }
 
+    @PostMapping("/join")
+    public String joinGame(@RequestBody Player player){
+        ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_PLAYER_SERVICE+joinGameEndpoint, player);
+        return responseEntity.getBody();
+    }
+
+    @PostMapping("/create")
+    public String createQuizRoom(@RequestBody Room room){
+        ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_ROOM_SERVICE+createQuizRoomEndpoint, room);
+        return responseEntity.getBody();
+    }
     //Adding the quizService API connections
 
 
