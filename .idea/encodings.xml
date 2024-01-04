@@ -2,12 +2,17 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gameService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/masterService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/masterService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/playerService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/playerService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quizService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quizService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/roomService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/roomService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scoreService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scoreService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

@@ -12,7 +12,8 @@ public class Question {
 
     @Id
     String id = "";
-    String questionStr = "";
+    String question = "";
+
     String quizId="";
     Map<String, String> options = new HashMap<>();
 
@@ -22,8 +23,8 @@ public class Question {
         return id;
     }
 
-    public String getQuestionStr() {
-        return questionStr;
+    public String getQuestion() {
+        return question;
     }
 
     public String getQuizId() {
@@ -38,31 +39,11 @@ public class Question {
         return correctAnswer;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setQuestionStr(String questionStr) {
-        this.questionStr = questionStr;
-    }
-
-    public void setQuizId(String quizId) {
-        this.quizId = quizId;
-    }
-
-    public void setOptions(Map<String, String> options) {
-        this.options = options;
-    }
-
-    public void setCorrectAnswer(String correctAnswer) {
-        this.correctAnswer = correctAnswer;
-    }
-
     @Override
     public String toString() {
         return "Question{" +
                 "id='" + id + '\'' +
-                ", question='" + questionStr + '\'' +
+                ", question='" + question + '\'' +
                 ", quizId='" + quizId + '\'' +
                 ", options=" + options +
                 ", correctAnswer='" + correctAnswer + '\'' +

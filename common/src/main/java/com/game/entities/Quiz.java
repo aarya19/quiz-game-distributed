@@ -12,20 +12,23 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Quiz {
 
 
-    QuizMaster quizMaster;
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    String userName;
 
     @Id
     String quizId;
     ArrayList<Question> questions;
 
 
-    public QuizMaster getQuizMaster() {
-        return quizMaster;
-    }
 
-    public void setQuizMaster(QuizMaster quizMaster) {
-        this.quizMaster = quizMaster;
-    }
+
 
     public String getQuizId() {
         return quizId;
