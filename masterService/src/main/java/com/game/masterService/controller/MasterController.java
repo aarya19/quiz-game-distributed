@@ -99,6 +99,7 @@ public class MasterController {
     @KafkaListener(topics = QUIZ_EVENTS, groupId = "quiz_events_questions")
     public void startGame(GameEvent event){
         if (event.getEventType().equals(Constants.EVENT_TYPE.UPDATE_QUESTION.event())){
+            System.out.println(event);
             template.convertAndSend("/events/question", event.getQuestion());
         }
     }
