@@ -10,6 +10,7 @@ import com.game.gameService.service.GameService;
 import com.game.utilities.MongoService;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +27,8 @@ public class GameController {
 
     private final MongoService mongoService;
     private KafkaProducerConfig producer;
+    @Value("${game.question.timeout}")
+    private long gameTimeout;
 
 
     @Autowired
@@ -36,18 +39,13 @@ public class GameController {
     }
 
     // start quiz
-    @GetMapping("/start/{quizId}")
+    @PostMapping("/start")
     public String startGame(@RequestParam String quizId){
-        // fetch questions from db
-//        Quiz quiz = mongoService.fetchQuiz(quizId);
-//        GameService service = new GameService(this.producer);
-//        service.startGame(quiz);
         KafkaTopicConfig topicConfig = new KafkaTopicConfig();
         NewTopic topic = topicConfig.createTopic(QUIZ_EVENTS);
         producer.setTopic(topic);
         GameEvent event = new GameEvent(Constants.EVENT_TYPE.START_QUIZ.event(),quizId);
         producer.sendMessage(event);
-
         return "Started Game";
     }
 
@@ -57,12 +55,12 @@ public class GameController {
         if (event.getEventType().equals(Constants.EVENT_TYPE.START_QUIZ.event())){
             Quiz quiz = mongoService.fetchQuiz(event.getQuizId());
             GameService service = new GameService(this.producer);
+            service.setGameTimeout(gameTimeout);
             service.startGame(quiz);
         }
         if (event.getEventType().equals(Constants.EVENT_TYPE.UPDATE_RESPONSE.event())){
 
             GameService service = new GameService(this.producer);
-
             service.updateResponse(event);
         }
     }

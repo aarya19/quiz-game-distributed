@@ -7,6 +7,7 @@ import com.game.entities.GameEvent;
 import com.game.entities.Player;
 import com.game.entities.Question;
 import com.game.entities.Quiz;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -17,6 +18,11 @@ import static com.game.core.Constants.QUIZ_EVENTS;
 @Service
 public class GameService {
     private KafkaProducerConfig producer;
+    private long gameTimeout;
+
+    public void setGameTimeout(long gameTimeout) {
+        this.gameTimeout = gameTimeout;
+    }
 
     public GameService(KafkaProducerConfig producer){
         this.producer=producer;
@@ -32,7 +38,6 @@ public class GameService {
 
 
         Timer timer = new Timer();
-        long timeout = 2000;
 
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -47,7 +52,7 @@ public class GameService {
                     timer.cancel();
                 }
             }
-        }, timeout, timeout);
+        }, gameTimeout, gameTimeout);
     }
 
     public void updateResponse(GameEvent gameEvent){
