@@ -1,17 +1,27 @@
 package com.game.masterService.controller;
 
 
-import com.game.entities.Answer;
-import com.game.entities.QuizMaster;
+import com.game.core.Constants;
+import com.game.entities.*;
 import com.game.utilities.RESTClient;
 import jakarta.ws.rs.core.Response;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
+
+import static com.game.core.Constants.QUIZ_EVENTS;
 
 @RestController
 @RequestMapping("/app")
 public class MasterController {
+
+    @Autowired
+    SimpMessagingTemplate template;
 
 
     @Value("${addscore.endpoint.url}")
@@ -53,6 +63,16 @@ public class MasterController {
         return responseEntity.getBody();
     }
 
-
+//    @PostMapping("/updateQuestion")
+//    @SendTo("/events/question")
+//    public Question updateQuestion(Question question){
+//        return question;
+//    }
+    @KafkaListener(topics = QUIZ_EVENTS, groupId = "quiz_events_questions")
+    public void startGame(GameEvent event){
+        if (event.getEventType().equals(Constants.EVENT_TYPE.UPDATE_QUESTION.event())){
+            template.convertAndSend("/events/question", event.getQuestion());
+        }
+    }
 
 }
