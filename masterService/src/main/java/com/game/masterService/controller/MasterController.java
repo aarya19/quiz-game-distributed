@@ -2,10 +2,7 @@ package com.game.masterService.controller;
 
 
 import com.game.core.Constants;
-import com.game.entities.Answer;
-import com.game.entities.GameEvent;
-import com.game.entities.Quiz;
-import com.game.entities.QuizMaster;
+import com.game.entities.*;
 import com.game.utilities.RESTClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -48,8 +45,6 @@ public class MasterController {
     private String URL_PLAYER_SERVICE;
     @Value("${createQuizRoom.endpoint.url}")
     private String createQuizRoomEndpoint;
-    @Value("${createQuizRoom.endpoint.url}")
-    private String createQuizEndpoint;
     @Value("${joinGame.endpoint.url}")
     private String joinGameEndpoint;
 
@@ -107,20 +102,20 @@ public class MasterController {
     }
 
 //    Game service
-    @PostMapping("/start")
+    @PostMapping("/startgame")
     public ResponseEntity<String> startGame(@RequestParam String quizId){
         return RESTClient.postMessage(URL_GAME_SERVICE+startGameEndpoint+"?quizId="+quizId, quizId);
     }
-    @PostMapping("/join")
-    public String joinGame(@RequestBody Player player){
+    @PostMapping("/joinRoom")
+    public ResponseEntity<String> joinGame(@RequestBody Player player){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_PLAYER_SERVICE+joinGameEndpoint, player);
-        return responseEntity.getBody();
+        return responseEntity;
     }
 
-    @PostMapping("/create")
-    public String createQuizRoom(@RequestBody Room room){
+    @PostMapping("/createRoom")
+    public ResponseEntity<String> createQuizRoom(@RequestBody Room room){
         ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_ROOM_SERVICE+createQuizRoomEndpoint, room);
-        return responseEntity.getBody();
+        return responseEntity;
     }
     //Adding the quizService API connections
 
