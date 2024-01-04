@@ -38,6 +38,11 @@ public class MasterController {
     private String URL_GAME_SERVICE;
     @Value("${game.hostUrl.scoreService}")
     private String URL_SCORE_SERVICE;
+    @Value("${createQuizMaster.endpoint.url}")
+    private String createQuizMasterEndpoint;
+
+    @Value("${createQuiz.endpoint.url}")
+    private String createQuizEndpoint;
 
     @PostMapping("/addScore")
     public void addScore(@RequestBody Answer playerAnswer){
@@ -45,11 +50,28 @@ public class MasterController {
         // Check the response if needed
         System.out.println("Response from external service: " + responseEntity.getBody());
 
-//        RedirectView redirectView = new RedirectView();
-//        // Set the URL to redirect to after the POST request
-//        redirectView.setUrl("https://your-redirect-url");
-//        return redirectView;
     }
+
+
+    @PostMapping("/createQuizMaster")
+    public String createQuizMaster(@RequestBody QuizMaster quizMaster){
+        ResponseEntity result = RESTClient.postMessage(URL_QUIZ_SERVICE + createQuizMasterEndpoint, quizMaster);
+        // Check the response if needed
+        System.out.println("Response from external service: " + result.getBody());
+        return result.getBody().toString();
+    }
+
+
+    @PostMapping("/createQuiz/{userName}")
+    public String createQuiz(@RequestBody Quiz quiz, @PathVariable String userName){
+        ResponseEntity result = RESTClient.postMessage(URL_QUIZ_SERVICE + createQuizEndpoint + "/" + userName, quiz);
+        // Check the response if needed
+        System.out.println("Response from external service: " + result.getBody());
+        return result.getBody().toString();
+    }
+
+
+
 
     @PostMapping("/signup")
     public String createUser(@RequestBody QuizMaster quizMaster){
@@ -74,5 +96,9 @@ public class MasterController {
             template.convertAndSend("/events/question", event.getQuestion());
         }
     }
+
+    //Adding the quizService API connections
+
+
 
 }

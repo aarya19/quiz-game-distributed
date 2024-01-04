@@ -53,7 +53,7 @@ public class QuizController {
 
         //add Quiz object to the DB.
         mongoService.saveData(quiz);
-        return "Quiz Created by" + quizMaster.getName();
+        return "Quiz Created by" + quizMaster.getUserName();
     }
 
 
