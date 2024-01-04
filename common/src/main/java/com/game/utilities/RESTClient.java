@@ -38,4 +38,24 @@ public class RESTClient {
     }
 
 
+
+    public static ResponseEntity<String> getMessage(String url){
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Content-Type", "application/json");
+
+        HttpEntity<String> requestEntity = new HttpEntity<>(null, headers);
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        // Perform the POST request
+        ResponseEntity<String> responseEntity = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                requestEntity,
+                String.class
+        );
+        return responseEntity;
+    }
+
+
 }
