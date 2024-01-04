@@ -7,12 +7,14 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication(scanBasePackages = {"com.game.common","com.game.entities", "com.game.utilities","com.game.masterService"})
-
 public class MasterServiceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MasterServiceApplication.class, args);
 	}
+
+
+	// CORS configuration bean
 
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
