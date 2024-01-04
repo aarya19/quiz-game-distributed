@@ -7,10 +7,9 @@
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="integration">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/game/entities/Quiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/controller/MasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/java/com/game/masterService/controller/MasterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/quizService/src/main/java/com/game/quizService/Controllers/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playerService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/playerService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2ZlDNBqImR4dLMGNZryjihoTLQi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
