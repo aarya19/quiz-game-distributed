@@ -75,14 +75,13 @@ services:
       - kafka
       - zookeeper
 
-#
-#  frontend:
-#    build:
-#      context: frontend
-#    command: >
-#      sh -c "cd frontend && npm install && npm start"
-#    ports:
-#      - "3000:3000"
+
+  frontend:
+    build:
+      context: frontend
+    ports:
+      - "3000:3000"
+
 
 networks:
   internal_network:

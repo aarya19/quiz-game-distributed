@@ -99,7 +99,7 @@
 							<goal>repackage</goal>
 						</goals>
 						<configuration>
-							<mainClass>com/game/gameService/GameServiceApplication.java</mainClass>
+							<mainClass>com.game.gameService.GameServiceApplication.java</mainClass>
 						</configuration>
 					</execution>
 				</executions>
