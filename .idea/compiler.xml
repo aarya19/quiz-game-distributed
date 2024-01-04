@@ -11,15 +11,11 @@
         <module name="playerService" />
         <module name="scoreService" />
         <module name="roomService" />
-        <module name="masterService" />
         <module name="common" />
+        <module name="masterService" />
         <module name="gameService" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="roomService (1)" target="17" />
-      <module name="roomService (2)" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
