@@ -39,6 +39,8 @@ public class MasterController {
     private String createQuizMasterEndpoint;
     @Value("${createQuiz.endpoint.url}")
     private String createQuizEndpoint;
+    @Value("${fetchQuizzes.endpoint.url}")
+    private String fetchQuizzesEndpoint;
     @Value("${game.start}")
     private String startGameEndpoint;
     @Value("${game.hostUrl.playerService}")
@@ -118,6 +120,12 @@ public class MasterController {
         return responseEntity;
     }
     //Adding the quizService API connections
+
+    @GetMapping("/fetchQuizzes/{userName}")
+    public ResponseEntity<String> createQuizRoom(@PathVariable String userName){
+        ResponseEntity<String> responseEntity = RESTClient.getMessage(URL_QUIZ_SERVICE + fetchQuizzesEndpoint + "/" + userName);
+        return responseEntity;
+    }
 
 
 

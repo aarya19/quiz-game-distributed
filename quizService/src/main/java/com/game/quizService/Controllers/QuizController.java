@@ -63,4 +63,10 @@ public class QuizController {
         //send the quiz object to the active-quizes queue
         return ResponseEntity.ok("Started quiz with" + quizId);
     }
+
+
+    @GetMapping("/fetchQuizzes/{userName}")
+    public List<Quiz> fetchQuizzes(@PathVariable String userName){
+        return mongoService.getAllQuizzes(userName);
+    }
 }

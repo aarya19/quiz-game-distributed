@@ -55,6 +55,11 @@ public class MongoService {
         List<Player> players = mongoTemplate.find(query, Player.class);
         return players;
     }
+    public List<Quiz> getAllQuizzes(String userName){
+        Query query = new Query(Criteria.where("userName").is(userName));
+        List<Quiz> quizzes = mongoTemplate.find(query, Quiz.class);
+        return quizzes;
+    }
 
     public void updateScore(String playerId){
         Query query = new Query(Criteria.where("_id").is(playerId));
