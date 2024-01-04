@@ -35,7 +35,7 @@ public class PlayerController {
     public String joinGame(@RequestBody Player player) throws ExecutionException, InterruptedException {
 
 //        mongoService.saveData(player);
-        player.setPlayerId(UUID.randomUUID().toString());
+//        player.setPlayerId(UUID.randomUUID().toString());
         NewTopic joinedTopic = topicConfig.createTopic(PLAYERS_JOINED);
         LOGGER.info(String.format("Topic: %s", joinedTopic.name()));
         producer.setTopic(joinedTopic);
