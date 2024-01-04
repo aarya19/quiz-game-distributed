@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="Added room creation using quiz id and quizmaster details. Can create checks if the topic is currently there or not.">
+    <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="integration">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/scoreService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +40,8 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectColorInfo">{
-    &quot;associatedIndex&quot;: 2
-    }</component>
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2ZlDNBqImR4dLMGNZryjihoTLQi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -66,8 +68,8 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "b503b949c3126f5ec7f5bf31bee2c6d3",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "d5d364594991cec76f5c8b41a38bb8c9",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -78,6 +80,11 @@
       <recent name="$PROJECT_DIR$/common/src/main/resources" />
       <recent name="$PROJECT_DIR$/quizService" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/scoreService" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/common/src/main/resources" />
+      <recent name="$PROJECT_DIR$/quizService" />
+      <recent name="$PROJECT_DIR$/roomService" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.game.quizService.Controllers" />
@@ -105,6 +112,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ScoreServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="scoreService" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.scorehandler.scoreService.ScoreServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,6 +135,8 @@
       <workItem from="1703162688040" duration="452000" />
       <workItem from="1703192638439" duration="14807000" />
       <workItem from="1703271950055" duration="9561000" />
+      <workItem from="1704102118398" duration="80000" />
+      <workItem from="1704102670720" duration="18944000" />
     </task>
     <task id="LOCAL-00001" summary="Added create room service api changes">
       <created>1703895224434</created>
@@ -129,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703895224434</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="integration">
+      <created>1704335542261</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704335542261</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,15 +163,31 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/frontend" />
+    </ignored-roots>
     <MESSAGE value="Added create room service api changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added create room service api changes" />
+    <MESSAGE value="integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -157,6 +196,11 @@
           <properties class="com.mongodb.MongoSocketOpenException" package="com.mongodb" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/scoreService/src/main/java/com/scorehandler/scoreService/service/ScoreService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
