@@ -8,24 +8,44 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="quizService" />
-        <module name="playerService" />
         <module name="scoreService" />
         <module name="roomService" />
-        <module name="common" />
+        <module name="roomservice" />
+        <module name="quizservice" />
+        <module name="scoreservice" />
         <module name="masterService" />
         <module name="gameService" />
+        <module name="playerService" />
+        <module name="common" />
+        <module name="masterservice" />
+        <module name="gameservice" />
+        <module name="playerservice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gameService" target="17" />
+      <module name="masterService" target="17" />
+      <module name="playerService" target="17" />
+      <module name="quizService" target="17" />
+      <module name="roomService" target="17" />
+      <module name="scoreService" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="gameService" options="-parameters" />
+      <module name="gameservice" options="-parameters" />
       <module name="masterService" options="-parameters" />
+      <module name="masterservice" options="-parameters" />
       <module name="playerService" options="-parameters" />
+      <module name="playerservice" options="-parameters" />
       <module name="quizService" options="-parameters" />
+      <module name="quizservice" options="-parameters" />
       <module name="roomService" options="-parameters" />
+      <module name="roomservice" options="-parameters" />
       <module name="scoreService" options="-parameters" />
+      <module name="scoreservice" options="-parameters" />
     </option>
   </component>
 </project>

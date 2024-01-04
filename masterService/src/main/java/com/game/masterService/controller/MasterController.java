@@ -4,13 +4,10 @@ package com.game.masterService.controller;
 import com.game.core.Constants;
 import com.game.entities.*;
 import com.game.utilities.RESTClient;
-import jakarta.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,9 +37,18 @@ public class MasterController {
     private String URL_SCORE_SERVICE;
     @Value("${createQuizMaster.endpoint.url}")
     private String createQuizMasterEndpoint;
-
     @Value("${createQuiz.endpoint.url}")
     private String createQuizEndpoint;
+    @Value("${fetchQuizzes.endpoint.url}")
+    private String fetchQuizzesEndpoint;
+    @Value("${game.start}")
+    private String startGameEndpoint;
+    @Value("${game.hostUrl.playerService}")
+    private String URL_PLAYER_SERVICE;
+    @Value("${createQuizRoom.endpoint.url}")
+    private String createQuizRoomEndpoint;
+    @Value("${joinGame.endpoint.url}")
+    private String joinGameEndpoint;
 
     @PostMapping("/addScore")
     public void addScore(@RequestBody Answer playerAnswer){
@@ -97,7 +103,29 @@ public class MasterController {
         }
     }
 
+//    Game service
+    @PostMapping("/startgame")
+    public ResponseEntity<String> startGame(@RequestParam String quizId){
+        return RESTClient.postMessage(URL_GAME_SERVICE+startGameEndpoint+"?quizId="+quizId, quizId);
+    }
+    @PostMapping("/joinRoom")
+    public ResponseEntity<String> joinGame(@RequestBody Player player){
+        ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_PLAYER_SERVICE+joinGameEndpoint, player);
+        return responseEntity;
+    }
+
+    @PostMapping("/createRoom")
+    public ResponseEntity<String> createQuizRoom(@RequestBody Room room){
+        ResponseEntity<String> responseEntity = RESTClient.postMessage(URL_ROOM_SERVICE+createQuizRoomEndpoint, room);
+        return responseEntity;
+    }
     //Adding the quizService API connections
+
+    @GetMapping("/fetchQuizzes/{userName}")
+    public ResponseEntity<String> createQuizRoom(@PathVariable String userName){
+        ResponseEntity<String> responseEntity = RESTClient.getMessage(URL_QUIZ_SERVICE + fetchQuizzesEndpoint + "/" + userName);
+        return responseEntity;
+    }
 
 
 
