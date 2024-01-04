@@ -13,7 +13,9 @@ public class MasterServiceApplication {
 		SpringApplication.run(MasterServiceApplication.class, args);
 	}
 
+
 	// CORS configuration bean
+
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
@@ -28,4 +30,5 @@ public class MasterServiceApplication {
 			}
 		};
 	}
+
 }
