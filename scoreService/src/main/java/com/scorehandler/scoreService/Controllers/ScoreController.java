@@ -50,14 +50,20 @@ public class ScoreController {
     public String addScore(@RequestBody Answer playerAnswer){
         String res = "Checking";
         int score = 0;
-        if(playerAnswer.getQuestion().getCorrectAnswer().equalsIgnoreCase(playerAnswer.getAnswer())){
+        if(playerAnswer.getQuestion()!=null && playerAnswer.getQuestion().getCorrectAnswer()!=null && playerAnswer.getAnswer()!=null){
+            if(playerAnswer.getQuestion().getCorrectAnswer().equalsIgnoreCase(playerAnswer.getAnswer())){
             ScoreEvent scorePlus = new ScoreEvent(playerAnswer.getPlayerId(), playerAnswer.getQuizId());
             scoreService.sendScore(scorePlus);
             res = "Score updated!";
         }
-        else{
-            res = "No Score :( ";
+            else{
+                res = "No Score :( ";
+            }
         }
+        else{
+            res = "Answer object not correct";
+        }
+
         return res;
     }
 
