@@ -15,6 +15,7 @@ import java.net.http.HttpResponse;
 import static com.game.core.Constants.QUIZ_EVENTS;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/app")
 public class MasterController {
 

@@ -22,7 +22,7 @@ public class MasterServiceApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/app/**") // Adjust the mapping based on your endpoint
-						.allowedOrigins("http://localhost:3000")
+						.allowedOriginPatterns("*")
 						.allowedMethods("GET", "POST", "PUT", "DELETE")
 						.allowedHeaders("*")
 						.allowCredentials(true)
