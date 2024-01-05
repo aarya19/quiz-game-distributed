@@ -7,29 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="quizService" />
-        <module name="scoreService" />
-        <module name="roomService" />
-        <module name="roomservice" />
-        <module name="quizservice" />
-        <module name="scoreservice" />
-        <module name="masterService" />
-        <module name="gameService" />
-        <module name="playerService" />
         <module name="common" />
         <module name="masterservice" />
+        <module name="roomservice" />
         <module name="gameservice" />
         <module name="playerservice" />
+        <module name="quizservice" />
+        <module name="scoreservice" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="gameService" target="17" />
-      <module name="masterService" target="17" />
-      <module name="playerService" target="17" />
-      <module name="quizService" target="17" />
-      <module name="roomService" target="17" />
-      <module name="scoreService" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
