@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.game</groupId>
-    <artifactId>roomService</artifactId>
+    <artifactId>roomservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>roomService</name>
     <description>Room Service of the Dsitributed Quiz Game</description>
@@ -54,6 +54,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.game.roomService.RoomServiceApplication</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

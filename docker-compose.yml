@@ -1,19 +1,19 @@
-version: '2'
+version: '3'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
-    ports:
-      - "22181:2181"
+    networks:
+      - internal_network
 
   kafka:
     image: confluentinc/cp-kafka:latest
     depends_on:
       - zookeeper
-    ports:
-      - "9093:9093"
+    networks:
+      - internal_network
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -21,3 +21,68 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  gameservice:
+    build:
+      context: gameservice
+    networks:
+      - internal_network
+    depends_on:
+      - kafka
+      - zookeeper
+
+  playerservice:
+    build:
+      context: playerservice
+    networks:
+      - internal_network
+    depends_on:
+      - kafka
+      - zookeeper
+
+  roomservice:
+    build:
+      context: roomservice
+    networks:
+      - internal_network
+    depends_on:
+      - kafka
+      - zookeeper
+  scoreservice:
+    build:
+      context: scoreservice
+    networks:
+      - internal_network
+    depends_on:
+      - kafka
+      - zookeeper
+  quizservice:
+    build:
+      context: quizservice
+    networks:
+      - internal_network
+    depends_on:
+      - kafka
+      - zookeeper
+  masterservice:
+    build:
+      context: masterservice
+    ports:
+      - "8080:8080"
+    networks:
+      - internal_network
+    depends_on:
+      - kafka
+      - zookeeper
+
+
+  frontend:
+    build:
+      context: frontend
+    ports:
+      - "3000:3000"
+
+
+networks:
+  internal_network:
+    driver: bridge

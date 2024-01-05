@@ -13,6 +13,8 @@
       <change beforePath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/masterService/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playerService/src/main/java/com/game/playerService/Controllers/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/playerService/src/main/java/com/game/playerService/Controllers/PlayerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playerService/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/playerService/target/classes/application.properties" afterDir="false" />
+    <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="mongo changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;game-service-dev&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/tfiro/IdeaProjects/quiz-game-distributed/playerService/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/tfiro/IdeaProjects/quiz-game-distributed/scoreservice&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,6 +83,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\scoreservice" />
+      <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\roomservice" />
+      <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\quizservice" />
+      <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\playerservice" />
+      <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\masterservice" />
       <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\playerService\src\main\resources" />
       <recent name="C:\Users\tfiro\IdeaProjects\quiz-game-distributed\playerService" />
       <recent name="$PROJECT_DIR$/common/src/main/resources" />
@@ -96,7 +103,7 @@
       <recent name="com.game.quizService.Controllers" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.docker-compose.yml.frontend: Compose Deployment">
     <configuration name="MasterServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="masterService" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.game.masterService.MasterServiceApplication" />
@@ -125,6 +132,86 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="frontend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.kafka: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.masterservice: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="masterservice" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.playerservice: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="playerservice" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.zookeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="zookeeper" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.frontend: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.zookeeper: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.playerservice: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.masterservice: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.kafka: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -158,7 +245,28 @@
       <option name="project" value="LOCAL" />
       <updated>1704335542261</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="containerization">
+      <created>1704385354996</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1704385354996</updated>
+    </task>
+    <task id="LOCAL-00004" summary="containerization">
+      <created>1704388172899</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704388172899</updated>
+    </task>
+    <task id="LOCAL-00005" summary="containerization">
+      <created>1704390629863</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704390629863</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +301,8 @@
     </ignored-roots>
     <MESSAGE value="Added create room service api changes" />
     <MESSAGE value="integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="integration" />
+    <MESSAGE value="containerization" />
+    <option name="LAST_COMMIT_MESSAGE" value="containerization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
