@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b80631ad-15a4-4ceb-871f-ffdbb17cbf30" name="Changes" comment="integration">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameService/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameService/target/gameservice-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/target/gameservice-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameService/target/gameservice-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/gameService/target/gameservice-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playerService/target/playerservice-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/playerService/target/playerservice-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playerService/target/playerservice-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/playerService/target/playerservice-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
@@ -264,7 +260,28 @@
       <option name="project" value="LOCAL" />
       <updated>1704390629863</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="integration">
+      <created>1704464483581</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704464483581</updated>
+    </task>
+    <task id="LOCAL-00007" summary="integration">
+      <created>1704464491093</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704464491093</updated>
+    </task>
+    <task id="LOCAL-00008" summary="integration">
+      <created>1704464516681</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704464516681</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,9 +315,9 @@
       <path value="$PROJECT_DIR$/frontend" />
     </ignored-roots>
     <MESSAGE value="Added create room service api changes" />
-    <MESSAGE value="integration" />
     <MESSAGE value="containerization" />
-    <option name="LAST_COMMIT_MESSAGE" value="containerization" />
+    <MESSAGE value="integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
