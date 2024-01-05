@@ -2,7 +2,6 @@ package com.game.entities;
 
 import java.util.ArrayList;
 
-import com.game.entities.Question;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -22,15 +21,15 @@ public class Quiz {
 
     String userName;
 
-    public String getQuizTtitle() {
-        return quizTtitle;
+    public String getQuizTitle() {
+        return quizTitle;
     }
 
-    public void setQuizTtitle(String quizTtitle) {
-        this.quizTtitle = quizTtitle;
+    public void setQuizTitle(String quizTitle) {
+        this.quizTitle = quizTitle;
     }
 
-    String quizTtitle;
+    String quizTitle;
 
     @Id
     String quizId;
