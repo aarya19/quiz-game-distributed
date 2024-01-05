@@ -22,6 +22,16 @@ public class Quiz {
 
     String userName;
 
+    public String getQuizTtitle() {
+        return quizTtitle;
+    }
+
+    public void setQuizTtitle(String quizTtitle) {
+        this.quizTtitle = quizTtitle;
+    }
+
+    String quizTtitle;
+
     @Id
     String quizId;
     ArrayList<Question> questions;
