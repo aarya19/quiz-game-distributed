@@ -26,7 +26,7 @@ Make sure you have the following tools installed on your machine:
 Package each service using:
     
     ```bash
-    mvn clean pacakage
+    mvn clean package
 
 ## Docker Compose
 Start the application with Docker Compose:
